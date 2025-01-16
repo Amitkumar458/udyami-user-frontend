@@ -1,6 +1,8 @@
 import { Suspense } from 'react';
 import { Navigate, Route, Routes} from 'react-router-dom';
 import DashboardRoutes from './Dashboard';
+import { Register } from '../pages/Register';
+import Login from '../pages/Login';
 
 export const Router = () => {
   const isTokenExist = false;
@@ -21,7 +23,7 @@ export const Router = () => {
           path="/register"
           element={
             <Suspense fallback>
-              <h1>Register</h1>
+              <Register/>
             </Suspense>
           }
         />
@@ -33,7 +35,7 @@ export const Router = () => {
           path="/login"
           element={
             <Suspense fallback>
-              <h1>Login</h1>
+              <Login/>
             </Suspense>
           }
         />
